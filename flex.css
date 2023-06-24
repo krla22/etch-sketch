@@ -1,0 +1,44 @@
+#main-div {
+    text-align: center;
+
+}
+#inner-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em auto;
+    height: 20vh;
+    width: 30vw;
+}
+
+.grid-item {
+    box-sizing: border-box;
+    display: flex;
+    background-color:    bisque;
+    border: 1px solid;
+    height: 1vh;
+}
+
+#data-form {
+    display: flex;
+    margin-bottom: 0em;
+    justify-content: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+function changeFlexBasis(){
+    let gridItems = innerDiv.getElementsByTagName('div');
+    let index = 0, length = gridItems.length;
+
+    for ( ; index <= length; index++){
+        gridItems[index].style.flexBasis = `calc(100%/${size})`;
+    }
+}
